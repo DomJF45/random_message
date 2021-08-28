@@ -6,7 +6,7 @@ const pastVerb = ['ran', 'took', 'asked', 'offered', 'wanted'];
 const conj = ['for', 'and', 'but', 'or', 'nor'];
 const nounObject = ['apple', 'toothbrush', 'iPhone', 'computer', 'pencil'];
 
-function generateNoun(nouns) {
+const generateNoun = (nouns) => {
     let noun1 = 0;
     var rand = Math.floor(Math.random() * 5);
     for(let i = 0; i < nouns.length; i++) {
@@ -15,7 +15,7 @@ function generateNoun(nouns) {
     return noun1;
 }
 
-function generateArticles(articles) {
+const generateArticles = (articles) => {
     let art1 = 0;
     var rand = Math.floor(Math.random() * 2);
     for (let i = 0; i < articles.length; i++) {
@@ -24,7 +24,7 @@ function generateArticles(articles) {
     return art1;
 }
 
-function generatePastVerbs(pastVerb) {
+const generatePastVerbs = (pastVerb) => {
     let pastVerb1 = 0;
     var rand = Math.floor(Math.random() * 5);
     for (let i = 0; i < pastVerb.length;i++) {
@@ -33,7 +33,7 @@ function generatePastVerbs(pastVerb) {
     return pastVerb1;
 }
 
-function generateConjunction(conj) {
+const generateConjunction = (conj) => {
     let conj1 = 0;
     var rand = Math.floor(Math.random() * 5);
     for (let i = 0; i < conj.length; i++) {
@@ -42,7 +42,7 @@ function generateConjunction(conj) {
     return conj1;
 }
 
-function generateNounObj(nounObject) {
+const generateNounObj = (nounObject) => {
     noun2 = 0;
     var rand = Math.floor(Math.random() * 5);
     for (let i = 0; i < nounObject.length; i++) {
