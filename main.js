@@ -51,3 +51,11 @@ const generateNounObj = (nounObject) => {
     return noun2;
 }
 
+function generateSentence() {
+    n1 = generateNoun(nouns);
+    a1 = generateArticles(articles);
+    n2 = generateNounObj(nounObject);
+    c1 = generateConjunction(conj);
+    v1 = generatePastVerbs(pastVerb);
+    console.log(a1 + " " + n1 + " " + v1 + " " + a1 + " " + n2 + " .");
+}
