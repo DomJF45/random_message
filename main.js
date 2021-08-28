@@ -10,7 +10,7 @@ const generateNoun = (nouns) => {
     let noun1 = 0;
     var rand = Math.floor(Math.random() * 5);
     for(let i = 0; i < nouns.length; i++) {
-        noun1 = noun[rand];
+        noun1 = nouns[rand];
     }
     return noun1;
 }
@@ -59,3 +59,5 @@ function generateSentence() {
     v1 = generatePastVerbs(pastVerb);
     console.log(a1 + " " + n1 + " " + v1 + " " + a1 + " " + n2 + " .");
 }
+
+generateSentence();
