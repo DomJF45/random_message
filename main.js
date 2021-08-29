@@ -1,6 +1,5 @@
 //Random Sentence Generator
-var newSentence, show, btn;
-
+let newSentence = '';
 const nouns = ['dog', 'cat', 'house', 'tree', 'fish'];
 const articles = ['a', 'the'];
 const pastVerb = ['ran', 'took', 'asked', 'offered', 'wanted'];
@@ -52,27 +51,16 @@ const generateNounObj = (nounObject) => {
     return noun2;
 }
 
-
 function generateSentence() {
-    
     n1 = generateNoun(nouns);
     a1 = generateArticles(articles);
     n2 = generateNounObj(nounObject);
     c1 = generateConjunction(conj);
     v1 = generatePastVerbs(pastVerb);
-    newSentence = a1 + " " + n1 + " " + v1 + " " + a1 + " " + n2 + ".";
-    //console.log(a1 + " " + n1 + " " + v1 + " " + a1 + " " + n2 + " .");
-    
-    
-    show.innerHTML = newSentence;
-    btn.innerHTML = 'And Again';
+    newSentence = a1 + " " + n1 + " " + v1 + " " + a1 + " " + n2 + " .";
+    window.alert(newSentence);
 }
 
-function buttonPress() {
-    btn = document.getElementById('btn');
-        btn.addEventListener('click', generateSentence, false)
-        show = document.getElementById('here');
-
+function bClick() {
+    generateSentence();
 }
-
-buttonPress();
