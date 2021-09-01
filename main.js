@@ -33,6 +33,7 @@ const generatePastVerbs = (pastVerb) => {
     return pastVerb1;
 }
 
+
 const generateConjunction = (conj) => {
     let conj1 = 0;
     var rand = Math.floor(Math.random() * 5);
@@ -57,9 +58,13 @@ function generateSentence() {
     n2 = generateNounObj(nounObject);
     c1 = generateConjunction(conj);
     v1 = generatePastVerbs(pastVerb);
-    newSentence = a1 + " " + n1 + " " + v1 + " " + a1 + " " + n2 + " .";
+    newSentence = capFirstLetter(a1) + " " + n1 + " " + v1 + " " + a1 + " " + n2 + "."
     //window.alert(newSentence);
     document.getElementById('target').innerHTML = newSentence;
+}
+
+function capFirstLetter(string) {
+    return string.charAt(0).toUpperCase() + string.slice(1);
 }
 
 function bClick() {
