@@ -58,7 +58,8 @@ function generateSentence() {
     c1 = generateConjunction(conj);
     v1 = generatePastVerbs(pastVerb);
     newSentence = a1 + " " + n1 + " " + v1 + " " + a1 + " " + n2 + " .";
-    window.alert(newSentence);
+    //window.alert(newSentence);
+    document.getElementById('target').innerHTML = newSentence;
 }
 
 function bClick() {
