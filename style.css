@@ -54,3 +54,7 @@ h1 {
 p {
   font-family: monospace;
 }
+
+#target {
+  text-align: center;
+}
