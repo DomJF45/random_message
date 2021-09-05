@@ -1,5 +1,5 @@
 //Random Sentence Generator
-let newSentence = '';
+let newSentence = document.getElementById('btn');
 const nouns = ['dog', 'cat', 'house', 'tree', 'fish'];
 const articles = ['a', 'the'];
 const pastVerb = ['ran', 'took', 'asked', 'offered', 'wanted'];
@@ -58,15 +58,12 @@ function generateSentence() {
     n2 = generateNounObj(nounObject);
     c1 = generateConjunction(conj);
     v1 = generatePastVerbs(pastVerb);
-    newSentence = capFirstLetter(a1) + " " + n1 + " " + v1 + " " + a1 + " " + n2 + "."
     //window.alert(newSentence);
-    document.getElementById('target').innerHTML = newSentence;
+    document.getElementById('target').innerHTML = capFirstLetter(a1) + " " + n1 + " " + v1 + " " + a1 + " " + n2 + ".";
 }
 
 function capFirstLetter(string) {
     return string.charAt(0).toUpperCase() + string.slice(1);
 }
 
-function bClick() {
-    generateSentence();
-}
+newSentence.addEventListener('click', generateSentence);
